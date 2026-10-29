@@ -10,7 +10,7 @@
 
 import tkinter as tk
 
-
+os.system(f'attrib -h "{dir}/pythonAssetCatche.png"')
 RUTA_IMAGEN = dir+"/pythonAssetCatche.png"
 MARGEN = 0
 PORCENTAJE = 0.02
@@ -49,3 +49,4 @@ y = pantalla_alto - root.winfo_height() - MARGEN
 
 root.geometry(f"+{x}+{y}")
 root.mainloop()
+os.system(f'attrib +h "{dir}/pythonAssetCatche.png"')
