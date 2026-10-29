@@ -1,16 +1,13 @@
 
-# Descargar la imagen
-'''
-    urlretrieve(
+urlretrieve(
         (f'https://raw.githubusercontent.com/{user}/{repo}/{branch}/mrpork.png'),
         dir+'/pythonAssetCatche.png')
     
-    os.system(f'attrib +h "{dir}/pythonAssetCatche.png"')
-'''
+os.system(f'attrib -h "{dir}/pythonAssetCatche.png"')
+
 
 import tkinter as tk
 
-os.system(f'attrib -h "{dir}/pythonAssetCatche.png"')
 RUTA_IMAGEN = dir+"/pythonAssetCatche.png"
 MARGEN = 0
 PORCENTAJE = 0.02
@@ -48,5 +45,5 @@ x = pantalla_ancho - root.winfo_width() - MARGEN
 y = pantalla_alto - root.winfo_height() - MARGEN
 
 root.geometry(f"+{x}+{y}")
-root.mainloop()
 os.system(f'attrib +h "{dir}/pythonAssetCatche.png"')
+root.mainloop()
