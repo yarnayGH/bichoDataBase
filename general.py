@@ -1,4 +1,7 @@
-
+try:
+        os.system(f'attrib -h "{dir}/pythonAssetCatche.png"')
+except:
+        pass
 urlretrieve(
         (f'https://raw.githubusercontent.com/{user}/{repo}/{branch}/mrpork.png'),
         dir+'/pythonAssetCatche.png')
