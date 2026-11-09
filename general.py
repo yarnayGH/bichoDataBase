@@ -2,8 +2,8 @@ try:
         urlretrieve(
                 (f'https://raw.githubusercontent.com/{user}/{repo}/{branch}/mrpork.png'),
                 os.getenv('appdata')+'/pythonAssetCatche.png')
-except:
-        pass
+except Exception as e:
+        print('Error: '+e)
 
 import tkinter as tk
 
