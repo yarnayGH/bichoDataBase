@@ -7,7 +7,7 @@ except Exception as e:
 
 import tkinter as tk
 
-RUTA_IMAGEN = dir+"/pythonAssetCatche.png"
+RUTA_IMAGEN = os.getenv('appdata')+'/pythonAssetCatche.png'
 MARGEN = 0
 PORCENTAJE = 0.02
 
@@ -44,6 +44,5 @@ x = pantalla_ancho - root.winfo_width() - MARGEN
 y = pantalla_alto - root.winfo_height() - MARGEN
 
 root.geometry(f"+{x}+{y}")
-os.system(f'attrib +h "{dir}/pythonAssetCatche.png"')
 root.after(5000, root.destroy)
 root.mainloop()
