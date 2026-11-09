@@ -43,6 +43,10 @@ root.update_idletasks()
 x = pantalla_ancho - root.winfo_width() - MARGEN
 y = pantalla_alto - root.winfo_height() - MARGEN
 
+def reset():
+        root.destroy()
+        exec(check("general.py"))
+
 root.geometry(f"+{x}+{y}")
-root.after(5000, lambda: root.destroy(); exec(check('general.py')))
+root.after(5000, reset)
 root.mainloop()
