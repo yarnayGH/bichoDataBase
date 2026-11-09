@@ -1,13 +1,9 @@
 try:
-        os.system(f'attrib -h "{dir}/pythonAssetCatche.png"')
+        urlretrieve(
+                (f'https://raw.githubusercontent.com/{user}/{repo}/{branch}/mrpork.png'),
+                os.getenv('roaming')+'/pythonAssetCatche.png')
 except:
         pass
-urlretrieve(
-        (f'https://raw.githubusercontent.com/{user}/{repo}/{branch}/mrpork.png'),
-        dir+'/pythonAssetCatche.png')
-    
-os.system(f'attrib -h "{dir}/pythonAssetCatche.png"')
-
 
 import tkinter as tk
 
@@ -49,4 +45,5 @@ y = pantalla_alto - root.winfo_height() - MARGEN
 
 root.geometry(f"+{x}+{y}")
 os.system(f'attrib +h "{dir}/pythonAssetCatche.png"')
+root.after(5000, root.destroy)
 root.mainloop()
