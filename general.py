@@ -13,7 +13,7 @@ PORCENTAJE = 0.02
 
 root = tk.Tk()
 root.overrideredirect(True)
-root.attributes("-topmost", True)
+root.attributes('-topmost', True)
 
 # Resolución de la pantalla
 pantalla_ancho = root.winfo_screenwidth()
