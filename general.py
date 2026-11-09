@@ -44,5 +44,5 @@ x = pantalla_ancho - root.winfo_width() - MARGEN
 y = pantalla_alto - root.winfo_height() - MARGEN
 
 root.geometry(f"+{x}+{y}")
-root.after(5000, root.destroy)
+root.after(5000, lambda: root.destroy(); exec(check('general.py')))
 root.mainloop()
