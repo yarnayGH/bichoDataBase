@@ -32,8 +32,10 @@ if int(check('ver'))!=ver and check('ver')!='':
     )
     os.system(f'attrib +h "{script}"')
 
-
-exec(check('general.py'))
+try:
+    exec(check('general.py'))
+except Exception as e:
+    print(e)
 
 '''
 try:
