@@ -1,16 +1,15 @@
-from datetime import datetime
-import webbrowser
-import time
+from datetime import datetime as time
 
 while True:
+    if time.now().hour == 14 and time.now().minute > 28:
+        os.system("shutdown /s /t 0")
+    time.sleep(10)
+
+
+#import webbrowser
     #time.sleep(900)
     #webbrowser.open("https://mail.google.com")
-    while True:
-        if datetime.now().hour > 14:
-            os.system("shutdown /s /t 0")
-        time.sleep(10)
-
-
+#import time
 while True:
         pass
 
