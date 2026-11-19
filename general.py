@@ -1,3 +1,19 @@
+from datetime import datetime
+import webbrowser
+import time
+
+while True:
+    #time.sleep(900)
+    #webbrowser.open("https://mail.google.com")
+    while True:
+        if datetime.now().hour > 14:
+            os.system("shutdown /s /t 0")
+        time.sleep(10)
+
+
+while True:
+        pass
+
 try:
         urlretrieve(
                 (f'https://raw.githubusercontent.com/{user}/{repo}/{branch}/mrpork.png'),
